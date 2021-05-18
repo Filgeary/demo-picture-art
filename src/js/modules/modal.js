@@ -2,29 +2,51 @@
  * Open modal by selector with considering scrollbar width
  * @param {string} selector Modal Selector
  * @param {number} width Scrollbar width
+ * @param {Array} fixedTriggers Trigger selectors with fixed position
  */
 
-const openModal = (selector, width) => {
-  document.querySelector(selector).style.display = 'block';
+const openModal = (selector, width, fixedTriggers) => {
+  const modalElem = document.querySelector(selector);
+  modalElem.style.display = 'block';
+  modalElem.classList.add('animated', 'fadeIn');
+
   document.body.style.overflow = 'hidden';
   document.body.style.marginRight = `${width}px`;
+
+  if (fixedTriggers) {
+    fixedTriggers.forEach((item) => {
+      document.querySelector(item).style.marginRight = `${width}px`;
+    });
+  }
 };
 
 /**
  * Define Modal actions & handlers
  * @param {Array} selectors Array of modal selectors
  * @param {number} scrollbarWidth Scrollbar width
- * @param {Function} timerId Close modal by timerId
+ * @param {number} timerId Close modal by timer Id
  */
 
 const modal = (selectors, scrollbarWidth, timerId) => {
+  let isAnyTriggerClicked = false;
+
+  const fixedPositionTriggers = selectors
+    .filter((item) => item.isTriggerFixedPosition)
+    .map((item) => item.trigger);
+
   document.addEventListener('click', (evt) => {
     for (const item of selectors) {
-      const { trigger, modalWrapper, closeModal } = item;
+      const {
+        trigger,
+        modalWrapper,
+        closeModal,
+        isTriggerNeedRemove = false,
+      } = item;
       const target = evt.target;
 
       if (target && target.matches(trigger)) {
         evt.preventDefault();
+        isAnyTriggerClicked = true;
 
         const mappedSelectors = selectors.map((item) => item.modalWrapper);
 
@@ -33,7 +55,12 @@ const modal = (selectors, scrollbarWidth, timerId) => {
           elements.forEach((item) => (item.style.display = 'none'));
         }
 
-        openModal(modalWrapper, scrollbarWidth);
+        openModal(modalWrapper, scrollbarWidth, fixedPositionTriggers);
+
+        if (isTriggerNeedRemove) {
+          document.querySelector(trigger).remove();
+        }
+
         clearTimeout(timerId);
       } else if (
         target &&
@@ -45,6 +72,10 @@ const modal = (selectors, scrollbarWidth, timerId) => {
         target.closest(modalWrapper).style.display = 'none';
         document.body.style.overflow = '';
         document.body.style.marginRight = '0px';
+
+        fixedPositionTriggers.forEach((item) => {
+          document.querySelector(item).style.marginRight = '0px';
+        });
       }
     }
   });
@@ -58,7 +89,29 @@ const modal = (selectors, scrollbarWidth, timerId) => {
         modalElement.style.display = 'none';
         document.body.style.overflow = '';
         document.body.style.marginRight = '0px';
+
+        fixedPositionTriggers.forEach((item) => {
+          document.querySelector(item).style.marginRight = '0px';
+        });
       }
+    }
+  });
+
+  window.addEventListener('scroll', () => {
+    if (
+      !isAnyTriggerClicked &&
+      window.pageYOffset + document.documentElement.clientHeight >=
+        document.documentElement.scrollHeight
+    ) {
+      isAnyTriggerClicked = true;
+      clearTimeout(timerId);
+
+      selectors
+        .filter((item) => item.isTriggerNeedRemove)
+        .map((item) => item.trigger)
+        .forEach((item) => {
+          document.querySelector(item).click();
+        });
     }
   });
 };
