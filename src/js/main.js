@@ -21,6 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
       modalWrapper: '.popup-consultation',
       closeModal: '.popup-consultation .popup-close',
     },
+    {
+      trigger: '.fixed-gift',
+      modalWrapper: '.popup-gift',
+      closeModal: '.popup-gift .popup-close',
+      isTriggerNeedRemove: true,
+      isTriggerFixedPosition: true,
+    },
   ];
 
   // show modal by timer
