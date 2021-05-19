@@ -1,5 +1,8 @@
 'use strict';
 
+// libs
+import { WOW } from 'wowjs';
+
 // utils
 import { calcScrollbarWidth } from './utils';
 
@@ -7,6 +10,10 @@ import { calcScrollbarWidth } from './utils';
 import { openModal, modal } from './modules/modal';
 
 document.addEventListener('DOMContentLoaded', () => {
+  // call animation lib
+  new WOW({ live: false }).init();
+
+  // constants
   const SCROLLBAR_WIDTH = calcScrollbarWidth();
 
   // modal selectors
