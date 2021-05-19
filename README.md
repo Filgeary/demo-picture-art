@@ -2,4 +2,5 @@
 
 > JS training-project from Udemy course
 
-- Modal
+- Modals
+- Animations
