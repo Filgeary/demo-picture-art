@@ -9,6 +9,7 @@ const openModal = (selector, width, fixedTriggers) => {
   const modalElem = document.querySelector(selector);
   modalElem.style.display = 'block';
   modalElem.classList.add('animated', 'fadeIn');
+  modalElem.style.animationDuration = '800ms';
 
   document.body.style.overflow = 'hidden';
   document.body.style.marginRight = `${width}px`;
