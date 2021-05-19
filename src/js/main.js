@@ -8,6 +8,7 @@ import { calcScrollbarWidth } from './utils';
 
 // modules
 import { openModal, modal } from './modules/modal';
+import { slider } from './modules/slider';
 
 document.addEventListener('DOMContentLoaded', () => {
   // call animation lib
@@ -44,4 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Main Modules
   modal(modalSelectors, SCROLLBAR_WIDTH, modalTimerId);
+  slider({
+    sliderContSelector: '.feedback-slider',
+    slideItemSelector: '.feedback-slider-item',
+    prevButtonSelector: '.main-prev-btn',
+    nextButtonSelector: '.main-next-btn',
+  });
+  slider({
+    sliderContSelector: '.main-slider',
+    slideItemSelector: '.main-slider-item',
+    direction: 'vertical',
+  });
 });

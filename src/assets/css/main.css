@@ -151,7 +151,7 @@ h4 {
 }
 .header .button-order {
   display: inline-block;
-  padding: 1.4rem 3rem;
+  padding: 1.4rem 2.7rem;
   box-shadow: none;
 }
 .header .button-order img {
@@ -197,7 +197,7 @@ h4 {
 }
 .main .file_upload > button {
   float: right;
-  width: 8em;
+  width: 14em;
   /* example */
 
   height: 100%;
@@ -480,7 +480,6 @@ h4 {
   opacity: 0.6;
   font-weight: 700;
   margin-left: 4rem;
-  appearance: none;
   border: none;
   display: block;
   font-size: 1.9rem;
@@ -805,6 +804,7 @@ h4 {
 .feedback {
   background-color: #f7e7e6;
   padding: 9rem 0;
+  overflow: hidden;
 }
 .feedback-slider-item {
   padding-bottom: 5rem;
