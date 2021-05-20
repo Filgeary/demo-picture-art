@@ -4,7 +4,7 @@
 import { WOW } from 'wowjs';
 
 // utils
-import { calcScrollbarWidth } from './utils';
+import { calcScrollbarWidth } from './utils/utils';
 
 // modules
 import { openModal, modal } from './modules/modal';
