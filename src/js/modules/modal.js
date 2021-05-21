@@ -75,7 +75,9 @@ const modal = (selectors, scrollbarWidth, timerId) => {
         document.body.style.marginRight = '0px';
 
         fixedPositionTriggers.forEach((item) => {
-          document.querySelector(item).style.marginRight = '0px';
+          if (document.querySelector(item)) {
+            document.querySelector(item).style.marginRight = '0px';
+          }
         });
       }
     }

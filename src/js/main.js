@@ -4,11 +4,12 @@
 import { WOW } from 'wowjs';
 
 // utils
-import { calcScrollbarWidth } from './utils';
+import { calcScrollbarWidth } from './utils/utils';
 
 // modules
 import { openModal, modal } from './modules/modal';
 import { slider } from './modules/slider';
+import { form } from './modules/form';
 
 document.addEventListener('DOMContentLoaded', () => {
   // call animation lib
@@ -16,6 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // constants
   const SCROLLBAR_WIDTH = calcScrollbarWidth();
+
+  // URLs postData
+  const URL = {
+    postJSON: 'https://jsonplaceholder.typicode.com/posts',
+    postText: 'https://echo.htmlacademy.ru',
+  };
 
   // modal selectors
   const modalSelectors = [
@@ -56,4 +63,5 @@ document.addEventListener('DOMContentLoaded', () => {
     slideItemSelector: '.main-slider-item',
     direction: 'vertical',
   });
+  form(URL.postText, modalTimerId);
 });
