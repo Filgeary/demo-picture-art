@@ -5,3 +5,4 @@
 - Modals
 - Animations
 - Sliders
+- Forms
