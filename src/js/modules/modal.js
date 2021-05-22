@@ -16,7 +16,11 @@ const openModal = (selector, width, fixedTriggers) => {
 
   if (fixedTriggers) {
     fixedTriggers.forEach((item) => {
-      document.querySelector(item).style.marginRight = `${width}px`;
+      const temp = document.querySelector(item);
+
+      if (temp) {
+        temp.style.marginRight = `${width}px`;
+      }
     });
   }
 };
@@ -75,8 +79,10 @@ const modal = (selectors, scrollbarWidth, timerId) => {
         document.body.style.marginRight = '0px';
 
         fixedPositionTriggers.forEach((item) => {
-          if (document.querySelector(item)) {
-            document.querySelector(item).style.marginRight = '0px';
+          const temp = document.querySelector(item);
+
+          if (temp) {
+            temp.style.marginRight = '0px';
           }
         });
       }
@@ -94,7 +100,11 @@ const modal = (selectors, scrollbarWidth, timerId) => {
         document.body.style.marginRight = '0px';
 
         fixedPositionTriggers.forEach((item) => {
-          document.querySelector(item).style.marginRight = '0px';
+          const temp = document.querySelector(item);
+
+          if (temp) {
+            temp.style.marginRight = '0px';
+          }
         });
       }
     }
