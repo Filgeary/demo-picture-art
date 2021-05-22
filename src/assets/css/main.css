@@ -536,6 +536,7 @@ h4 {
 }
 .calc .file_upload > div {
   padding-left: 1em /* example */;
+  text-align: center;
 }
 .calc .file_upload input[type='file'] {
   position: absolute;
@@ -555,6 +556,7 @@ h4 {
 }
 .calc .file_upload > button {
   transition: background 0.2s;
+  width: fit-content;
   border-radius: 50px;
   overflow: hidden;
   white-space: nowrap;

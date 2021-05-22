@@ -19,6 +19,23 @@ const form = (url, timerId) => {
     error: 'assets/img/fail.png',
   };
 
+  const uploadInputs = document.querySelectorAll('[name="upload"]');
+
+  const clearUploadInputs = () => {
+    uploadInputs.forEach((item) => {
+      item.previousElementSibling.textContent = 'Файл не выбран';
+    });
+  };
+
+  document.addEventListener('input', (evt) => {
+    const target = evt.target;
+
+    if (target && target.matches('[name="upload"]')) {
+      const formattedFileName = target.files[0].name.slice(0, 10) + ' ...';
+      target.previousElementSibling.textContent = formattedFileName;
+    }
+  });
+
   document.addEventListener('submit', (evt) => {
     const target = evt.target;
 
@@ -59,6 +76,7 @@ const form = (url, timerId) => {
         })
         .finally(() => {
           target.reset();
+          clearUploadInputs();
 
           setTimeout(() => {
             if (target.closest('[data-modal]')) {
