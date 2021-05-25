@@ -6,3 +6,4 @@
 - Animations
 - Sliders
 - Forms
+- Input `tel` mask
