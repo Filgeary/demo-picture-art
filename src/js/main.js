@@ -5,6 +5,8 @@ import { WOW } from 'wowjs';
 
 // utils
 import { calcScrollbarWidth } from './utils/utils';
+import { inputMask } from './utils/inputMask';
+import { checkTextInput } from './utils/checkTextInput';
 
 // modules
 import { openModal, modal } from './modules/modal';
@@ -15,8 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // call animation lib
   new WOW({ live: false }).init();
 
-  // constants
+  // call utils
   const SCROLLBAR_WIDTH = calcScrollbarWidth();
+  inputMask('[name="phone"]');
+  checkTextInput('[name="name"]');
+  checkTextInput('[name="message"]');
 
   // URLs postData
   const URL = {
