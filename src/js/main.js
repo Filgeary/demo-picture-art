@@ -4,7 +4,7 @@
 import { WOW } from 'wowjs';
 
 // utils
-import { calcScrollbarWidth } from './utils/utils';
+import { calcScrollbarWidth } from './utils/common';
 import { inputMask } from './utils/inputMask';
 import { checkTextInput } from './utils/checkTextInput';
 
