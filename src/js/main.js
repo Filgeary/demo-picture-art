@@ -7,6 +7,7 @@ import { WOW } from 'wowjs';
 import { calcScrollbarWidth } from './utils/common';
 import { inputMask } from './utils/inputMask';
 import { checkTextInput } from './utils/checkTextInput';
+import { showStyleCards } from './utils/showStyleCards';
 
 // modules
 import { openModal, modal } from './modules/modal';
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   inputMask('[name="phone"]');
   checkTextInput('[name="name"]');
   checkTextInput('[name="message"]');
+  showStyleCards('.button-styles', '.styles-2');
 
   // URLs postData
   const URL = {
