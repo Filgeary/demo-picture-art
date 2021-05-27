@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
   inputMask('[name="phone"]');
   checkTextInput('[name="name"]');
   checkTextInput('[name="message"]');
-  showStyleCards('.button-styles', '.styles-2');
 
   // URLs postData
   const URL = {
+    getJSON: 'http://localhost:3000/styles',
     postJSON: 'https://jsonplaceholder.typicode.com/posts',
     postText: 'https://echo.htmlacademy.ru',
   };
@@ -71,4 +71,5 @@ document.addEventListener('DOMContentLoaded', () => {
     direction: 'vertical',
   });
   form(URL.postText, modalTimerId);
+  showStyleCards('.button-styles', '[data-styles-wrapper]', URL.getJSON);
 });
