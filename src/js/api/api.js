@@ -1,11 +1,34 @@
-const postDataJSON = async (url, data) => {
+// const postDataJSON = async (url, data) => {
+//   try {
+//     const result = await fetch(url, {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: data,
+//     });
+
+//     if (!result.ok) {
+//       throw new Error(`Failed to fetch ${url}, status: ${result.status}`);
+//     }
+
+//     return await result.json();
+//   } catch (err) {
+//     console.error(err);
+//   }
+// };
+
+/**
+ * Get Data via JSON
+ * @param {string} url Url to get data
+ * @returns JSON response
+ */
+const getDataJSON = async (url) => {
   try {
     const result = await fetch(url, {
-      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: data,
     });
 
     if (!result.ok) {
@@ -41,4 +64,4 @@ const postDataText = async (url, data) => {
   }
 };
 
-export { postDataJSON, postDataText };
+export { getDataJSON, postDataText };
