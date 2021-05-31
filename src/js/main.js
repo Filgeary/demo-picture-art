@@ -13,6 +13,7 @@ import { showStyleCards } from './utils/showStyleCards';
 import { openModal, modal } from './modules/modal';
 import { slider } from './modules/slider';
 import { form } from './modules/form';
+import { calc } from './modules/calc';
 
 document.addEventListener('DOMContentLoaded', () => {
   // call animation lib
@@ -72,4 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   form(URL.postText, modalTimerId);
   showStyleCards('.button-styles', '[data-styles-wrapper]', URL.getJSON);
+  calc({
+    calcContSelector: '.calc',
+    sizeSelect: '#size',
+    materialSelect: '#material',
+    optionsSelect: '#options',
+    promocodeInputSelector: '.promocode',
+    totalSumSelector: '.calc-price',
+    promocodeText: 'IWANTPOPART',
+  });
 });

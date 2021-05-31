@@ -268,43 +268,46 @@
         <h2>Рассчитайте стоимость и получите скидку 30%</h2>
         <div class="row">
           <div class="col-md-4 col-offset-1">
-            <form class="form" action="#" method="POST">
+            <form class="form" action="#" method="POST" data-calc-form>
               <h4>Загрузите свое фото</h4>
               <div class="file_upload">
                 <button type="button">Загрузить фото</button>
                 <div>Файл не выбран</div>
                 <input type="file" name="upload" />
               </div>
-              <select id="size">
-                <option>Выберите размер картины</option>
-                <option>40x50</option>
-                <option>50x70</option>
-                <option>70x70</option>
-                <option>70x100</option>
+              <select id="size" required>
+                <option value="">Выберите размер картины</option>
+                <option value="1000">40x50</option>
+                <option value="1200">50x70</option>
+                <option value="1400">70x70</option>
+                <option value="1600">70x100</option>
               </select>
-              <select id="material">
-                <option>Выберите материал картины</option>
+              <select id="material" required>
+                <option value="">Выберите материал картины</option>
                 <option
+                  value="1.0"
                   title="Изящный, позволяет легко создавать текстуру, подходит для декоративных картин маслом."
                 >
                   Холст из волокна
                 </option>
                 <option
+                  value="1.25"
                   title="Достаточно грубый и создает ощущение реальности, подходит для классических пейзажей, натюрмортов и портретов."
                 >
                   Льняной холст
                 </option>
                 <option
+                  value="1.5"
                   title="Изящный, подходит для всех типов реалистичных портретов."
                 >
                   Холст из натурального хлопка
                 </option>
               </select>
               <select id="options">
-                <option>Дополнительные услуги</option>
-                <option>Покрытие арт-гелем</option>
-                <option>Экспресс-изготовление</option>
-                <option>Доставка готовых работ</option>
+                <option value="">Дополнительные услуги</option>
+                <option value="1000">Покрытие арт-гелем</option>
+                <option value="2000">Экспресс-изготовление</option>
+                <option value="500">Доставка готовых работ</option>
               </select>
               <input
                 type="text"

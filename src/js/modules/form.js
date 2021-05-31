@@ -62,6 +62,12 @@ const form = (url, timerId) => {
       // create instance FormData
       const dataForm = new FormData(target);
 
+      // check for calc-form
+      if (target && target.matches('[data-calc-form]')) {
+        const totalSumElem = document.querySelector('.calc-price');
+        dataForm.append('TotalSum', totalSumElem.textContent);
+      }
+
       // posting data
       postDataText(url, dataForm)
         .then((data) => {
@@ -77,6 +83,11 @@ const form = (url, timerId) => {
         .finally(() => {
           target.reset();
           clearUploadInputs();
+
+          if (target && target.matches('[data-calc-form]')) {
+            document.querySelector('.calc-price').textContent =
+              'Для расчета нужно выбрать размер картины и материал картины';
+          }
 
           setTimeout(() => {
             if (target.closest('[data-modal]')) {
