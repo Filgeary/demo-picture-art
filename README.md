@@ -8,3 +8,4 @@
 - Forms
 - Input `tel` mask
 - Get Cards via `fetch`
+- Calculator
