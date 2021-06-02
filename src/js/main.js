@@ -14,6 +14,7 @@ import { openModal, modal } from './modules/modal';
 import { slider } from './modules/slider';
 import { form } from './modules/form';
 import { calc } from './modules/calc';
+import { filter } from './modules/filter';
 
 document.addEventListener('DOMContentLoaded', () => {
   // call animation lib
@@ -56,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // show modal by timer
   const modalTimerId = setTimeout(() => {
     openModal('.popup-consultation', SCROLLBAR_WIDTH);
-  }, 60000);
+  }, 180000);
 
   // Main Modules
   modal(modalSelectors, SCROLLBAR_WIDTH, modalTimerId);
@@ -81,5 +82,13 @@ document.addEventListener('DOMContentLoaded', () => {
     promocodeInputSelector: '.promocode',
     totalSumSelector: '.calc-price',
     promocodeText: 'IWANTPOPART',
+  });
+  filter({
+    filterContSelector: '.portfolio',
+    filterButtonSelector: 'li',
+    itemsContSelector: '.portfolio-wrapper',
+    itemSelector: '.portfolio-block',
+    noFilterSelector: '.portfolio-no',
+    classActive: '.active',
   });
 });
