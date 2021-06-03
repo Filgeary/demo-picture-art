@@ -16,6 +16,7 @@ import { slider } from './modules/slider';
 import { form } from './modules/form';
 import { calc } from './modules/calc';
 import { filter } from './modules/filter';
+import { accordion } from './modules/accordion';
 
 document.addEventListener('DOMContentLoaded', () => {
   // call animation lib
@@ -92,5 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
     itemSelector: '.portfolio-block',
     noFilterSelector: '.portfolio-no',
     classActive: '.active',
+  });
+  accordion({
+    accordionContSelector: '#accordion',
+    buttonSelector: '.accordion-heading',
+    itemSelector: '.accordion-block',
+    activeClassSelector: '.ui-accordion-header-active',
   });
 });
