@@ -10,3 +10,4 @@
 - Get Cards via `fetch`
 - Calculator
 - Filter tabs
+- Accordion
