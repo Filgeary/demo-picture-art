@@ -443,7 +443,8 @@ h4 {
 }
 .card-block {
   background-color: #f7e7e6;
-  padding-top: 7rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 .card-block h3 {
   margin-top: 3rem;
@@ -711,14 +712,14 @@ h4 {
 }
 .sizes-block {
   position: relative;
-  cursor:pointer;
+  cursor: pointer;
 }
 .sizes-block img {
-  overflow:hidden;
-  display:block;
+  overflow: hidden;
+  display: block;
   width: 100%;
-  height:auto;
-  object-fit:cover;
+  height: auto;
+  object-fit: cover;
 }
 .sizes-block p {
   position: absolute;
@@ -895,9 +896,7 @@ h4 {
   border-bottom: 3rem solid #f7e7e6;
 }
 .often-questions .ui-accordion-header-active {
-  cursor: auto;
   color: #c51abb;
-  margin-bottom: 0;
 }
 .often-questions .ui-accordion-header-active span {
   border-bottom: none;
