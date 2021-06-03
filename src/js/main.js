@@ -8,6 +8,7 @@ import { calcScrollbarWidth } from './utils/common';
 import { inputMask } from './utils/inputMask';
 import { checkTextInput } from './utils/checkTextInput';
 import { showStyleCards } from './utils/showStyleCards';
+import { showImgOnHover } from './utils/showImgOnHover';
 
 // modules
 import { openModal, modal } from './modules/modal';
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   inputMask('[name="phone"]');
   checkTextInput('[name="name"]');
   checkTextInput('[name="message"]');
+  showImgOnHover('.sizes-wrapper', '.sizes-block');
 
   // URLs postData
   const URL = {

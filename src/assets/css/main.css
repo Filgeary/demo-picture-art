@@ -702,7 +702,7 @@ h4 {
   margin-top: 9rem;
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
 }
 .sizes-wrapper-wrap {
   width: 100%;
@@ -711,9 +711,14 @@ h4 {
 }
 .sizes-block {
   position: relative;
+  cursor:pointer;
 }
 .sizes-block img {
-  max-width: 100%;
+  overflow:hidden;
+  display:block;
+  width: 100%;
+  height:auto;
+  object-fit:cover;
 }
 .sizes-block p {
   position: absolute;
