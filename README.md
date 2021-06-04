@@ -12,3 +12,4 @@
 - Filter tabs
 - Accordion
 - Dropdown Menu
+- Smooth scrolling & Scroll to top
