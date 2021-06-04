@@ -9,6 +9,7 @@ import { inputMask } from './utils/inputMask';
 import { checkTextInput } from './utils/checkTextInput';
 import { showStyleCards } from './utils/showStyleCards';
 import { showImgOnHover } from './utils/showImgOnHover';
+import { dropdownMenu } from './utils/dropdownMenu';
 
 // modules
 import { openModal, modal } from './modules/modal';
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   checkTextInput('[name="name"]');
   checkTextInput('[name="message"]');
   showImgOnHover('.sizes-wrapper', '.sizes-block');
+  dropdownMenu('.burger', '.burger-menu');
 
   // URLs postData
   const URL = {
