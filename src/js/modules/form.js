@@ -24,6 +24,7 @@ const form = (url, timerId) => {
   const clearUploadInputs = () => {
     uploadInputs.forEach((item) => {
       item.previousElementSibling.textContent = 'Файл не выбран';
+      item.closest('.file_upload').classList.remove('js-drag-drop-style');
     });
   };
 
@@ -33,6 +34,7 @@ const form = (url, timerId) => {
     if (target && target.matches('[name="upload"]')) {
       const formattedFileName = target.files[0].name.slice(0, 10) + ' ...';
       target.previousElementSibling.textContent = formattedFileName;
+      target.closest('.file_upload').classList.add('js-drag-drop-style');
     }
   });
 
