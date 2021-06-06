@@ -117,7 +117,7 @@ h4 {
 }
 .header-menu .header-menu-sub li {
   display: block;
-  cursor:pointer;
+  cursor: pointer;
 }
 .header-menu .header-menu-sub li a:after {
   display: none;
@@ -1732,4 +1732,10 @@ h4 {
 }
 .button-scrollToTop svg {
   border-radius: 50%;
+}
+.js-drag-drop-style {
+  display: block;
+  border: 3px dashed #888;
+  border-radius: 50px;
+  background-color: hsla(0, 0, 50, 0.1);
 }

@@ -11,6 +11,7 @@ import { showStyleCards } from './utils/showStyleCards';
 import { showImgOnHover } from './utils/showImgOnHover';
 import { dropdownMenu } from './utils/dropdownMenu';
 import { scrollToTop } from './utils/scrollToTop';
+import { dragDrop } from './utils/dragDrop';
 
 // modules
 import { openModal, modal } from './modules/modal';
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   showImgOnHover('.sizes-wrapper', '.sizes-block');
   dropdownMenu('.burger', '.burger-menu');
   scrollToTop('.button-scrollToTop');
+  dragDrop('[name="upload"]', '.file_upload', '.js-drag-drop-style');
 
   // URLs postData
   const URL = {
