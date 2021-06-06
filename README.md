@@ -13,3 +13,4 @@
 - Accordion
 - Dropdown Menu
 - Smooth scrolling & Scroll to top
+- Drag&Drop for file upload
