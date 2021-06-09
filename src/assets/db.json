@@ -2,7 +2,7 @@
   "styles": [
     {
       "src": "assets/img/styles-5.jpg",
-      "title": "Пастелью",
+      "title": "Пастель",
       "link": "#pastel"
     },
     {
@@ -12,7 +12,7 @@
     },
     {
       "src": "assets/img/styles-7.png",
-      "title": "Фотомозаика",
+      "title": "Мозаика",
       "link": "#mosaic"
     },
     {

@@ -14,7 +14,7 @@ const showStyleCards = (triggerSelector, wrapperSelector, urlGetDataJSON) => {
     evt.preventDefault();
 
     getDataJSON(urlGetDataJSON)
-      .then((data) => createCard(data))
+      .then((data) => createCard(data.styles))
       .catch((err) => console.error(err))
       .finally(() => this.remove());
   });

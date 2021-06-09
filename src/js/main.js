@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // URLs postData
   const URL = {
-    getJSON: 'http://localhost:3000/styles',
+    getJSON: 'assets/db.json',
     postJSON: 'https://jsonplaceholder.typicode.com/posts',
     postText: 'https://echo.htmlacademy.ru',
   };
