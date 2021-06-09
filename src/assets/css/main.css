@@ -183,7 +183,7 @@ h4 {
 }
 .main {
   background-color: #f7e7e6;
-  padding-top: 3rem;
+  padding-top: 5rem;
   /* Making it beautiful */
 }
 .main .file_upload {
@@ -328,7 +328,7 @@ h4 {
 }
 .main .button-order {
   padding: 1.5rem 4rem;
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
 }
 .main-slider-btn {
   position: absolute;
@@ -366,7 +366,7 @@ h4 {
 }
 .promo {
   position: relative;
-  padding: 10rem 0 9rem 0;
+  padding: 12rem 0 9rem 0;
 }
 .promo-img {
   position: relative;
