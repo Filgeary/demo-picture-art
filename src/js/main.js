@@ -6,7 +6,6 @@ import { WOW } from 'wowjs';
 // utils
 import { calcScrollbarWidth } from './utils/common';
 import { inputMask } from './utils/inputMask';
-import { checkTextInput } from './utils/checkTextInput';
 import { showStyleCards } from './utils/showStyleCards';
 import { showImgOnHover } from './utils/showImgOnHover';
 import { dropdownMenu } from './utils/dropdownMenu';
@@ -28,8 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // call utils
   const SCROLLBAR_WIDTH = calcScrollbarWidth();
   inputMask('[name="phone"]');
-  checkTextInput('[name="name"]');
-  checkTextInput('[name="message"]');
   showImgOnHover('.sizes-wrapper', '.sizes-block');
   dropdownMenu('.burger', '.burger-menu');
   scrollToTop('.button-scrollToTop');
