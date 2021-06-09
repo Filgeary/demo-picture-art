@@ -232,7 +232,7 @@ h4 {
   text-overflow: ellipsis;
   background-color: transparent;
   font-size: 1.5rem;
-  color: #c51abb;
+  color: #b918af;
   border: 2px solid #c51abb;
   padding: 1.5rem;
 }
@@ -322,7 +322,7 @@ h4 {
 .main .p-button {
   margin: 7rem 0 3rem 0;
   text-align: center;
-  color: #c51abb;
+  color: #b918af;
   font-size: 1.5rem;
   font-weight: 400;
 }
@@ -419,15 +419,16 @@ h4 {
 .styles-block img:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-.styles-block h4 {
+.styles-block h3 {
   margin-top: 2rem;
+  font-size: 2rem;
   text-align: center;
 }
 .styles-block a {
   text-align: center;
   display: block;
   text-decoration: underline;
-  color: #c51abb;
+  color: #b918af;
 }
 .styles .button-transparent {
   margin-top: 8rem;
@@ -474,7 +475,7 @@ h4 {
 .calc h2 {
   margin-bottom: 9rem;
 }
-.calc h4 {
+.calc h3 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 3rem;
@@ -747,7 +748,7 @@ h4 {
 .sizes-block .sizes-hit {
   width: auto;
   display: inline-block;
-  background-color: #f99300;
+  background-color: hsl(35deg 100% 34%);
   color: #ffffff;
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -1235,6 +1236,9 @@ h4 {
   padding: 3rem 6rem 4rem 6rem;
 }
 @media (max-width: 1399px) {
+  .styles-block h3 {
+    font-size: 1.6rem;
+  }
   .paints {
     display: none;
   }

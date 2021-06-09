@@ -107,7 +107,7 @@
           >
             <div class="file_upload">
               <button type="button">Загрузить фото</button>
-              <input type="file" name="upload" />
+              <input type="file" name="upload" aria-label="Input file upload" />
             </div>
             <p class="email">
               E-mail: <a href="mailto:info@kartiny.art">info@kartiny.art</a>
@@ -206,28 +206,28 @@
           <div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
             <div class="styles-block">
               <img src="assets/img/styles-1.jpg" alt="" />
-              <h4>Маслом</h4>
+              <h3>Маслом</h3>
               <a href="#">Подробнее</a>
             </div>
           </div>
           <div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
             <div class="styles-block">
               <img src="assets/img/styles-2.jpg" alt="" />
-              <h4>Акварелью</h4>
+              <h3>Акварелью</h3>
               <a href="#">Подробнее</a>
             </div>
           </div>
           <div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
             <div class="styles-block">
               <img src="assets/img/styles-3.jpg" alt="" />
-              <h4>Карандашом</h4>
+              <h3>Карандашом</h3>
               <a href="#">Подробнее</a>
             </div>
           </div>
           <div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
             <div class="styles-block">
               <img src="assets/img/styles-4.jpg" alt="" />
-              <h4>Ручкой</h4>
+              <h3>Ручкой</h3>
               <a href="#">Подробнее</a>
             </div>
           </div>
@@ -271,11 +271,15 @@
         <div class="row">
           <div class="col-md-4 col-offset-1">
             <form class="form" action="#" method="POST" data-calc-form>
-              <h4>Загрузите свое фото</h4>
+              <h3>Загрузите свое фото</h3>
               <div class="file_upload">
                 <button type="button">Загрузить фото</button>
                 <div>Файл не выбран</div>
-                <input type="file" name="upload" />
+                <input
+                  type="file"
+                  name="upload"
+                  aria-label="Input file upload"
+                />
               </div>
               <select id="size" required>
                 <option value="">Выберите размер картины</option>
@@ -941,7 +945,7 @@
             <div class="file_upload">
               <button type="button">Загрузить фото</button>
               <div>Файл не выбран</div>
-              <input type="file" name="upload" />
+              <input type="file" name="upload" aria-label="Input file upload" />
             </div>
             <div class="main-form">
               <div class="form">
@@ -973,7 +977,7 @@
     </div>
 
     <!-- SVG -->
-    <a href="#header" class="button-scrollToTop">
+    <a href="#header" class="button-scrollToTop" title="Scroll to Top">
       <svg
         class="up"
         viewBox="0 0 26 26"
