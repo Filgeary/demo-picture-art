@@ -14,7 +14,7 @@ const showStyleCards = (triggerSelector, wrapperSelector, urlGetDataJSON) => {
     evt.preventDefault();
 
     getDataJSON(urlGetDataJSON)
-      .then((data) => createCard(data))
+      .then((data) => createCard(data.styles))
       .catch((err) => console.error(err))
       .finally(() => this.remove());
   });
@@ -35,7 +35,7 @@ const showStyleCards = (triggerSelector, wrapperSelector, urlGetDataJSON) => {
       cardElem.innerHTML = `
           <div class="styles-block">
             <img src=${src} alt="#" />
-            <h4>${title}</h4>
+            <h3>${title}</h3>
             <a href=${link}>Подробнее</a>
           </div>
         `;

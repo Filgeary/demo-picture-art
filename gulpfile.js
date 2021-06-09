@@ -38,6 +38,13 @@ gulp.task('copy-assets', () => {
     .on('end', browsersync.reload);
 });
 
+gulp.task('copy-favicons', () => {
+  return gulp
+    .src('./src/assets/favicons/**/*.*')
+    .pipe(gulp.dest(PATH_PUBLIC))
+    .on('end', browsersync.reload);
+});
+
 gulp.task('clean', () => {
   return del('public');
 });
@@ -54,12 +61,16 @@ gulp.task('watch', () => {
 
   gulp.watch('./src/index.html', gulp.parallel('copy-html'));
   gulp.watch('./src/assets/**/*.*', gulp.parallel('copy-assets'));
+  gulp.watch('./src/assets/favicons/**/*.*', gulp.parallel('copy-favicons'));
   gulp.watch('./src/js/**/*.js', gulp.parallel('build-js'));
 });
 
 gulp.task(
   'build',
-  gulp.series('clean', gulp.parallel('copy-html', 'copy-assets', 'build-js')),
+  gulp.series(
+    'clean',
+    gulp.parallel('copy-html', 'copy-assets', 'copy-favicons', 'build-js'),
+  ),
 );
 
 gulp.task('build-prod-js', () => {

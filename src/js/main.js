@@ -6,7 +6,6 @@ import { WOW } from 'wowjs';
 // utils
 import { calcScrollbarWidth } from './utils/common';
 import { inputMask } from './utils/inputMask';
-import { checkTextInput } from './utils/checkTextInput';
 import { showStyleCards } from './utils/showStyleCards';
 import { showImgOnHover } from './utils/showImgOnHover';
 import { dropdownMenu } from './utils/dropdownMenu';
@@ -25,19 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // call animation lib
   new WOW({ live: false }).init();
 
-  // call utils
-  const SCROLLBAR_WIDTH = calcScrollbarWidth();
-  inputMask('[name="phone"]');
-  checkTextInput('[name="name"]');
-  checkTextInput('[name="message"]');
-  showImgOnHover('.sizes-wrapper', '.sizes-block');
-  dropdownMenu('.burger', '.burger-menu');
-  scrollToTop('.button-scrollToTop');
-  dragDrop('[name="upload"]', '.file_upload', '.js-drag-drop-style');
-
-  // URLs postData
+  // URLs getData & postData
   const URL = {
-    getJSON: 'http://localhost:3000/styles',
+    getJSON: 'assets/db.json',
     postJSON: 'https://jsonplaceholder.typicode.com/posts',
     postText: 'https://echo.htmlacademy.ru',
   };
@@ -62,6 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
       isTriggerFixedPosition: true,
     },
   ];
+
+  // call utils
+  const SCROLLBAR_WIDTH = calcScrollbarWidth();
+  inputMask('[name="phone"]');
+  showImgOnHover('.sizes-wrapper', '.sizes-block');
+  dropdownMenu('.burger', '.burger-menu');
+  scrollToTop('.button-scrollToTop');
+  dragDrop('[name="upload"]', '.file_upload', '.js-drag-drop-style');
 
   // show modal by timer
   const modalTimerId = setTimeout(() => {

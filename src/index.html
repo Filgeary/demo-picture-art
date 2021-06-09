@@ -9,6 +9,18 @@
     />
     <title>Картины.art - портрет на холсте</title>
 
+    <!-- Preload critical assets -->
+    <link
+      rel="preload"
+      href="assets/img/main-1.avif"
+      as="image"
+      type="image/avif"
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -33,7 +45,7 @@
     <header id="header" class="header">
       <div class="container">
         <div class="col-md-2 col-sm-3 col-xs-6">
-          <button class="burger">
+          <button class="burger" title="Menu">
             <img src="assets/img/burger.svg" alt="" /><span>Каталог</span>
           </button>
           <ul class="burger-menu">
@@ -103,7 +115,7 @@
           >
             <div class="file_upload">
               <button type="button">Загрузить фото</button>
-              <input type="file" name="upload" />
+              <input type="file" name="upload" aria-label="Input file upload" />
             </div>
             <p class="email">
               E-mail: <a href="mailto:info@kartiny.art">info@kartiny.art</a>
@@ -125,10 +137,18 @@
           <div class="col-md-7">
             <div class="main-slider">
               <div class="main-slider-item">
-                <img src="assets/img/main-1.png" alt="" />
+                <picture>
+                  <source srcset="assets/img/main-1.avif" type="image/avif" />
+                  <source srcset="assets/img/main-1.webp" type="image/webp" />
+                  <img src="assets/img/main-1.png" alt="#" />
+                </picture>
               </div>
               <div class="main-slider-item">
-                <img src="assets/img/main-2.png" alt="" />
+                <picture>
+                  <source srcset="assets/img/main-2.avif" type="image/avif" />
+                  <source srcset="assets/img/main-2.webp" type="image/webp" />
+                  <img src="assets/img/main-2.png" alt="#" />
+                </picture>
               </div>
             </div>
           </div>
@@ -161,9 +181,7 @@
                 </p>
               </div>
             </div>
-            <p class="p-button">
-              Отправьте фото сейчас и получите дизайн через 1 час
-            </p>
+            <p class="p-button">Отправьте фото и получите дизайн через 1 час</p>
             <button class="button button-order button-design">
               <img
                 class="button-order-img"
@@ -179,7 +197,10 @@
     <section class="promo">
       <div class="container">
         <div class="col-md-7">
-          <img class="promo-img" src="assets/img/promo-1.png" alt="" />
+          <picture>
+            <source srcset="assets/img/promo-1.webp" type="image/webp" />
+            <img class="promo-img" src="assets/img/promo-1.png" alt="#" />
+          </picture>
         </div>
         <div class="col-md-5">
           <p>Просто отправьте фото и</p>
@@ -191,7 +212,10 @@
           </button>
         </div>
       </div>
-      <img class="palette" src="assets/img/palette.png" alt="" />
+      <picture>
+        <source srcset="assets/img/palette.webp" type="image/webp" />
+        <img class="palette" src="assets/img/palette.png" alt="#" />
+      </picture>
     </section>
 
     <section class="styles" id="styles">
@@ -201,29 +225,29 @@
         <div class="row" data-styles-wrapper>
           <div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
             <div class="styles-block">
-              <img src="assets/img/styles-1.jpg" alt="" />
-              <h4>Маслом</h4>
+              <img src="assets/img/styles-1.jpg" alt="" loading="lazy" />
+              <h3>Маслом</h3>
               <a href="#">Подробнее</a>
             </div>
           </div>
           <div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
             <div class="styles-block">
-              <img src="assets/img/styles-2.jpg" alt="" />
-              <h4>Акварелью</h4>
+              <img src="assets/img/styles-2.jpg" alt="" loading="lazy" />
+              <h3>Акварелью</h3>
               <a href="#">Подробнее</a>
             </div>
           </div>
           <div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
             <div class="styles-block">
-              <img src="assets/img/styles-3.jpg" alt="" />
-              <h4>Карандашом</h4>
+              <img src="assets/img/styles-3.jpg" alt="" loading="lazy" />
+              <h3>Карандашом</h3>
               <a href="#">Подробнее</a>
             </div>
           </div>
           <div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
             <div class="styles-block">
-              <img src="assets/img/styles-4.jpg" alt="" />
-              <h4>Ручкой</h4>
+              <img src="assets/img/styles-4.jpg" alt="" loading="lazy" />
+              <h3>Ручкой</h3>
               <a href="#">Подробнее</a>
             </div>
           </div>
@@ -232,7 +256,7 @@
           Посмотреть больше стилей
         </button>
       </div>
-      <img class="paints" src="assets/img/paints.png" alt="" />
+      <img class="paints" src="assets/img/paints.png" alt="" loading="lazy" />
     </section>
 
     <section class="card card-1 wow fadeIn">
@@ -240,7 +264,7 @@
         <div class="card-block">
           <div class="row">
             <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1">
-              <img src="assets/img/card-1.png" alt="" />
+              <img src="assets/img/card-1.png" alt="" loading="lazy" />
             </div>
             <div class="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1">
               <div class="card-block-text">
@@ -267,11 +291,15 @@
         <div class="row">
           <div class="col-md-4 col-offset-1">
             <form class="form" action="#" method="POST" data-calc-form>
-              <h4>Загрузите свое фото</h4>
+              <h3>Загрузите свое фото</h3>
               <div class="file_upload">
                 <button type="button">Загрузить фото</button>
                 <div>Файл не выбран</div>
-                <input type="file" name="upload" />
+                <input
+                  type="file"
+                  name="upload"
+                  aria-label="Input file upload"
+                />
               </div>
               <select id="size" required>
                 <option value="">Выберите размер картины</option>
@@ -319,7 +347,7 @@
             </form>
           </div>
           <div class="col-md-4 col-md-offset-2 hidden-sm hidden-xs">
-            <img src="assets/img/calc-1.png" alt="" />
+            <img src="assets/img/calc-1.png" alt="" loading="lazy" />
             <p class="calc-text">
               Пропорциональный размер изображения рассчитывается автоматически.
               Если Вы хотите кадрировать изображение или просто узнать стоимость
@@ -347,34 +375,34 @@
       </div>
       <div class="portfolio-wrapper">
         <div class="portfolio-block all girl">
-          <img src="assets/img/portfolio-1.jpg" alt="" />
+          <img src="assets/img/portfolio-1.jpg" alt="" loading="lazy" />
         </div>
         <div class="portfolio-block all girl">
-          <img src="assets/img/portfolio-2.jpg" alt="" />
+          <img src="assets/img/portfolio-2.jpg" alt="" loading="lazy" />
         </div>
         <div class="portfolio-block all lovers">
-          <img src="assets/img/portfolio-3.jpg" alt="" />
+          <img src="assets/img/portfolio-3.jpg" alt="" loading="lazy" />
         </div>
         <div class="portfolio-block all guy">
-          <img src="assets/img/portfolio-4.jpg" alt="" />
+          <img src="assets/img/portfolio-4.jpg" alt="" loading="lazy" />
         </div>
         <div class="portfolio-block all chef">
-          <img src="assets/img/portfolio-5.jpg" alt="" />
+          <img src="assets/img/portfolio-5.jpg" alt="" loading="lazy" />
         </div>
         <div class="portfolio-block all lovers">
-          <img src="assets/img/portfolio-6.jpg" alt="" />
+          <img src="assets/img/portfolio-6.jpg" alt="" loading="lazy" />
         </div>
         <div class="portfolio-block all lovers">
-          <img src="assets/img/portfolio-7.jpg" alt="" />
+          <img src="assets/img/portfolio-7.jpg" alt="" loading="lazy" />
         </div>
         <div class="portfolio-block all girl">
-          <img src="assets/img/portfolio-8.jpg" alt="" />
+          <img src="assets/img/portfolio-8.jpg" alt="" loading="lazy" />
         </div>
         <div class="portfolio-block all girl">
-          <img src="assets/img/portfolio-9.jpg" alt="" />
+          <img src="assets/img/portfolio-9.jpg" alt="" loading="lazy" />
         </div>
         <div class="portfolio-block all chef">
-          <img src="assets/img/portfolio-10.jpg" alt="" />
+          <img src="assets/img/portfolio-10.jpg" alt="" loading="lazy" />
         </div>
       </div>
       <div class="container">
@@ -401,6 +429,7 @@
                   class="gift-img-1"
                   src="assets/img/gift-1.png"
                   alt=""
+                  loading="lazy"
                 />Подарок со вкусом
               </h4>
             </div>
@@ -410,13 +439,18 @@
                   class="gift-img-2"
                   src="assets/img/gift-2.png"
                   alt=""
+                  loading="lazy"
                 />Всегда будет в тренде
               </h4>
             </div>
             <div class="col-sm-4">
               <h4 class="wow swing" data-wow-delay="0.6s">
-                <img class="gift-img-3" src="assets/img/gift-3.png" alt="" />Все
-                будут в восторге
+                <img
+                  class="gift-img-3"
+                  src="assets/img/gift-3.png"
+                  alt=""
+                  loading="lazy"
+                />Все будут в восторге
               </h4>
             </div>
           </div>
@@ -434,6 +468,7 @@
               class="features-img-1"
               src="assets/img/features-1.png"
               alt=""
+              loading="lazy"
             />Натуральный холст и лучшие краски
           </h4>
         </div>
@@ -443,6 +478,7 @@
               class="features-img-2"
               src="assets/img/features-2.png"
               alt=""
+              loading="lazy"
             />Гарантия минимальной цены
           </h4>
         </div>
@@ -452,6 +488,7 @@
               class="features-img-3"
               src="assets/img/features-3.png"
               alt=""
+              loading="lazy"
             />Большой выбор декоративных рамок
           </h4>
         </div>
@@ -461,6 +498,7 @@
               class="features-img-4"
               src="assets/img/features-4.png"
               alt=""
+              loading="lazy"
             />Рисуют профессиональные художники
           </h4>
         </div>
@@ -470,6 +508,7 @@
               class="features-img-5"
               src="assets/img/features-5.png"
               alt=""
+              loading="lazy"
             />Защита от старения до 70 лет
           </h4>
         </div>
@@ -479,6 +518,7 @@
               class="features-img-6"
               src="assets/img/features-6.png"
               alt=""
+              loading="lazy"
             />Доставка в любую точку мира
           </h4>
         </div>
@@ -492,26 +532,46 @@
         <div class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
           <div class="sizes-wrapper">
             <div class="sizes-block">
-              <img class="size-1" src="assets/img/sizes-1.png" alt="" />
+              <img
+                class="size-1"
+                src="assets/img/sizes-1.png"
+                alt=""
+                loading="lazy"
+              />
               <p class="size">40x50</p>
               <p class="starting-price">5 290 руб.</p>
               <p class="final-price">3 670 руб.</p>
             </div>
             <div class="sizes-block">
-              <img class="size-2" src="assets/img/sizes-2.png" alt="" />
+              <img
+                class="size-2"
+                src="assets/img/sizes-2.png"
+                alt=""
+                loading="lazy"
+              />
               <p class="size">50x70</p>
               <p class="starting-price">5 290 руб.</p>
               <p class="final-price">3 670 руб.</p>
             </div>
             <div class="sizes-block">
-              <img class="size-3" src="assets/img/sizes-3.png" alt="" />
+              <img
+                class="size-3"
+                src="assets/img/sizes-3.png"
+                alt=""
+                loading="lazy"
+              />
               <p class="size">70x70</p>
               <p class="starting-price">5 290 руб.</p>
               <p class="final-price">3 670 руб.</p>
               <p class="sizes-hit">Хит продаж</p>
             </div>
             <div class="sizes-block">
-              <img class="size-4" src="assets/img/sizes-4.png" alt="" />
+              <img
+                class="size-4"
+                src="assets/img/sizes-4.png"
+                alt=""
+                loading="lazy"
+              />
               <p class="size">70x100</p>
               <p class="starting-price">5 290 руб.</p>
               <p class="final-price">3 670 руб.</p>
@@ -528,37 +588,37 @@
         <div class="row">
           <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="scheme-block">
-              <img src="assets/img/scheme-1.png" alt="" />
+              <img src="assets/img/scheme-1.png" alt="" loading="lazy" />
               <p>Присылаете фотографию и свои пожелания</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="scheme-block" style="position: relative; top: 1.3rem">
-              <img src="assets/img/scheme-2.png" alt="" />
+              <img src="assets/img/scheme-2.png" alt="" loading="lazy" />
               <p>Мы готовим варианты дизайна с учётом ваших требований</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="scheme-block">
-              <img src="assets/img/scheme-3.png" alt="" />
+              <img src="assets/img/scheme-3.png" alt="" loading="lazy" />
               <p>Вы утверждаете макет и художник приступает к работе</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="scheme-block">
-              <img src="assets/img/scheme-4.png" alt="" />
+              <img src="assets/img/scheme-4.png" alt="" loading="lazy" />
               <p>Выбираете вариант багетной рамы и оформления</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="scheme-block">
-              <img src="assets/img/scheme-5.png" alt="" />
+              <img src="assets/img/scheme-5.png" alt="" loading="lazy" />
               <p>Согласовываются адрес и удобное время доставки</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="scheme-block" style="position: relative; top: -1.6rem">
-              <img src="assets/img/scheme-6.png" alt="" />
+              <img src="assets/img/scheme-6.png" alt="" loading="lazy" />
               <p>Вы платите оставшуюся сумму курьеру при получении картины</p>
             </div>
           </div>
@@ -571,7 +631,7 @@
         <div class="card-block">
           <div class="row">
             <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1">
-              <img src="assets/img/card-2.jpg" alt="" />
+              <img src="assets/img/card-2.jpg" alt="" loading="lazy" />
             </div>
             <div class="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1">
               <div class="card-block-text">
@@ -608,7 +668,7 @@
               </div>
             </div>
             <div class="col-md-6 col-sm-6">
-              <img src="assets/img/card-3.png" alt="" />
+              <img src="assets/img/card-3.png" alt="" loading="lazy" />
             </div>
           </div>
         </div>
@@ -628,7 +688,7 @@
             </div>
           </div>
           <div class="col-md-7">
-            <img src="assets/img/promo-2.png" alt="" />
+            <img src="assets/img/promo-2.png" alt="" loading="lazy" />
           </div>
         </div>
       </div>
@@ -638,15 +698,19 @@
       <div class="container">
         <div class="feedback-slider" style="position: relative; height: 400px">
           <button class="main-slider-btn main-prev-btn">
-            <img src="assets/img/left-arr.png" alt="left" /></button
+            <img
+              src="assets/img/left-arr.png"
+              alt="left"
+              loading="lazy"
+            /></button
           >"
           <button class="main-slider-btn main-next-btn">
-            <img src="assets/img/right-arr.png" alt="right" />
+            <img src="assets/img/right-arr.png" alt="right" loading="lazy" />
           </button>
           <div class="feedback-slider-item">
             <div class="col-sm-5">
               <div class="feedback-block">
-                <img src="assets/img/feedback-1.png" alt="" />
+                <img src="assets/img/feedback-1.png" alt="" loading="lazy" />
                 <button class="button button-order button-design">
                   Хочу так же
                 </button>
@@ -672,7 +736,7 @@
           <div class="feedback-slider-item">
             <div class="col-sm-5">
               <div class="feedback-block">
-                <img src="assets/img/feedback-2.jpg" alt="" />
+                <img src="assets/img/feedback-2.jpg" alt="" loading="lazy" />
                 <button class="button button-order button-design">
                   Хочу так же
                 </button>
@@ -697,7 +761,7 @@
           <div class="feedback-slider-item">
             <div class="col-sm-5">
               <div class="feedback-block">
-                <img src="assets/img/feedback-3.jpg" alt="" />
+                <img src="assets/img/feedback-3.jpg" alt="" loading="lazy" />
                 <button class="button button-order button-design">
                   Хочу так же
                 </button>
@@ -726,7 +790,7 @@
 
     <section class="often-questions" id="often-questions">
       <div class="container">
-        <img class="spirt" src="assets/img/spirt.png" alt="" />
+        <img class="spirt" src="assets/img/spirt.png" alt="" loading="lazy" />
         <p class="p-heading">Часто задаваемые вопросы</p>
         <h2>Ответим на любой из ваших вопросов</h2>
         <div id="accordion">
@@ -785,7 +849,12 @@
             </p>
           </div>
         </div>
-        <img class="brushes" src="assets/img/brushes.png" alt="" />
+        <img
+          class="brushes"
+          src="assets/img/brushes.png"
+          alt=""
+          loading="lazy"
+        />
       </div>
     </section>
 
@@ -793,7 +862,12 @@
       <div class="container">
         <div class="row">
           <div class="col-md-7">
-            <img class="promo-img" src="assets/img/promo-3.png" alt="" />
+            <img
+              class="promo-img"
+              src="assets/img/promo-3.png"
+              alt=""
+              loading="lazy"
+            />
           </div>
           <div class="col-md-5">
             <p>Просто отправьте фото и</p>
@@ -822,7 +896,7 @@
                 placeholder="Ваш телефон"
                 required
               />
-              <input type="text" name="email" placeholder="Ваш E-mail" />
+              <input type="email" name="email" placeholder="Ваш E-mail" />
               <input
                 class="input-text"
                 name="message"
@@ -890,6 +964,25 @@
           </div>
         </div>
       </div>
+
+      <!-- Development info -->
+      <div style="margin-top: 50px; text-align: center">
+        <mark>&lt; Development &gt;</mark>
+        &VerticalSeparator;
+        <a
+          href="https://www.udemy.com/course/javascript_practice/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Markup by Udemy course</a
+        >
+        &VerticalSeparator;
+        <a
+          href="https://github.com/Filgeary"
+          target="_blank"
+          rel="noopener noreferrer"
+          >JS code by Filgeary</a
+        >
+      </div>
     </footer>
 
     <!-- Modals -->
@@ -937,7 +1030,7 @@
             <div class="file_upload">
               <button type="button">Загрузить фото</button>
               <div>Файл не выбран</div>
-              <input type="file" name="upload" />
+              <input type="file" name="upload" aria-label="Input file upload" />
             </div>
             <div class="main-form">
               <div class="form">
@@ -951,9 +1044,10 @@
                   type="tel"
                   name="phone"
                   placeholder="Ваш телефон"
+                  title="+7 (123) 456 78 90"
                   required
                 />
-                <input type="text" name="email" placeholder="Ваш e-mail" />
+                <input type="email" name="email" placeholder="Ваш e-mail" />
                 <textarea
                   name="message"
                   placeholder="Комментарий"
@@ -968,12 +1062,12 @@
     </div>
 
     <!-- SVG -->
-    <a href="#header" class="button-scrollToTop">
+    <a href="#header" class="button-scrollToTop" title="Scroll to Top">
       <svg
         class="up"
         viewBox="0 0 26 26"
-        width="50px"
-        height="50px"
+        width="45px"
+        height="45px"
         fill="#fff"
         xmlns="http://www.w3.org/2000/svg"
       >

@@ -34,7 +34,7 @@ h4 {
   font-weight: 700;
 }
 .p15 {
-  font-size: 1.5;
+  font-size: 1.5rem;
 }
 .p-heading {
   font-size: 2.2rem;
@@ -122,7 +122,7 @@ h4 {
 .header-menu .header-menu-sub li a:after {
   display: none;
 }
-.header-menu li {
+.header-menu > li {
   display: inline-block;
   padding: 2rem 1.5rem;
   padding-right: 3rem;
@@ -171,19 +171,18 @@ h4 {
   margin: 0;
   width: 20rem;
 }
-.header .burger-menu li {
-  padding: 2rem;
-}
 .header .burger-menu li:hover {
   background-color: #eed4d2;
 }
 .header .burger-menu li a {
+  display: inline-block;
+  padding: 2rem;
   color: inherit;
   text-decoration: none;
 }
 .main {
   background-color: #f7e7e6;
-  padding-top: 3rem;
+  padding-top: 5rem;
   /* Making it beautiful */
 }
 .main .file_upload {
@@ -232,7 +231,7 @@ h4 {
   text-overflow: ellipsis;
   background-color: transparent;
   font-size: 1.5rem;
-  color: #c51abb;
+  color: #b918af;
   border: 2px solid #c51abb;
   padding: 1.5rem;
 }
@@ -322,13 +321,13 @@ h4 {
 .main .p-button {
   margin: 7rem 0 3rem 0;
   text-align: center;
-  color: #c51abb;
+  color: #b918af;
   font-size: 1.5rem;
   font-weight: 400;
 }
 .main .button-order {
   padding: 1.5rem 4rem;
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
 }
 .main-slider-btn {
   position: absolute;
@@ -366,7 +365,7 @@ h4 {
 }
 .promo {
   position: relative;
-  padding: 10rem 0 9rem 0;
+  padding: 12rem 0 9rem 0;
 }
 .promo-img {
   position: relative;
@@ -397,6 +396,7 @@ h4 {
   right: 0;
 }
 .styles {
+  content-visibility: auto;
   position: relative;
 }
 .styles .p-heading {
@@ -419,15 +419,16 @@ h4 {
 .styles-block img:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-.styles-block h4 {
+.styles-block h3 {
   margin-top: 2rem;
+  font-size: 2rem;
   text-align: center;
 }
 .styles-block a {
   text-align: center;
   display: block;
   text-decoration: underline;
-  color: #c51abb;
+  color: #b918af;
 }
 .styles .button-transparent {
   margin-top: 8rem;
@@ -442,6 +443,9 @@ h4 {
   position: absolute;
   bottom: -25rem;
   left: 0;
+}
+.card {
+  content-visibility: auto;
 }
 .card-block {
   background-color: #f7e7e6;
@@ -464,6 +468,7 @@ h4 {
   margin-left: -6rem;
 }
 .calc {
+  content-visibility: auto;
   padding: 8rem 0 4rem 0;
   /* Making it beautiful */
 }
@@ -474,7 +479,7 @@ h4 {
 .calc h2 {
   margin-bottom: 9rem;
 }
-.calc h4 {
+.calc h3 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 3rem;
@@ -582,6 +587,7 @@ h4 {
   background-size: 100%;
 }
 .portfolio {
+  content-visibility: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
@@ -632,6 +638,7 @@ h4 {
   margin: 15rem 0;
 }
 .gift {
+  content-visibility: auto;
   background: url('../img/gift-bg.jpg') no-repeat;
   background-size: cover;
   background-position-x: 60%;
@@ -664,6 +671,7 @@ h4 {
   left: -3rem;
 }
 .features {
+  content-visibility: auto;
   padding: 10rem 0;
 }
 .features h2,
@@ -693,6 +701,7 @@ h4 {
   left: -15rem;
 }
 .sizes {
+  content-visibility: auto;
   padding: 9rem 0 20rem 0;
   background: url('../img/sizes-bg.jpg') no-repeat center;
   background-size: cover;
@@ -747,7 +756,7 @@ h4 {
 .sizes-block .sizes-hit {
   width: auto;
   display: inline-block;
-  background-color: #f99300;
+  background-color: hsl(35deg 100% 34%);
   color: #ffffff;
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -757,6 +766,7 @@ h4 {
   font-weight: 700;
 }
 .scheme {
+  content-visibility: auto;
   padding-top: 9rem;
 }
 .scheme h2 {
@@ -814,6 +824,7 @@ h4 {
   right: -10rem;
 }
 .feedback {
+  content-visibility: auto;
   background-color: #f7e7e6;
   padding: 9rem 0;
   overflow: hidden;
@@ -863,6 +874,7 @@ h4 {
   left: 5rem;
 }
 .often-questions {
+  content-visibility: auto;
   position: relative;
   padding: 10rem 0 8rem 0;
 }
@@ -916,11 +928,15 @@ h4 {
   top: -25rem;
   left: 0;
 }
+.promo {
+  content-visibility: auto;
+}
 .promo-3 {
   background-color: #f7e7e6;
   padding: 8rem 0;
 }
 .consultation {
+  content-visibility: auto;
   background-color: #eed4d2;
   padding: 10rem 0;
 }
@@ -955,6 +971,7 @@ h4 {
   margin-top: 1rem;
 }
 .footer {
+  content-visibility: auto;
   padding: 4rem 0 3rem 0;
 }
 .footer th {
@@ -1235,6 +1252,9 @@ h4 {
   padding: 3rem 6rem 4rem 6rem;
 }
 @media (max-width: 1399px) {
+  .styles-block h3 {
+    font-size: 1.6rem;
+  }
   .paints {
     display: none;
   }
@@ -1551,7 +1571,6 @@ h4 {
     font-size: 1.5rem;
   }
   .main-features {
-    max-width: auto;
     margin-left: 20%;
   }
   .main-slider-btn {
@@ -1719,8 +1738,8 @@ h4 {
 .button-scrollToTop {
   display: block;
   opacity: 0;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   position: fixed;
   bottom: 3%;
   right: 2%;
@@ -1737,5 +1756,4 @@ h4 {
   display: block;
   border: 3px dashed #888;
   border-radius: 50px;
-  background-color: hsla(0, 0, 50, 0.1);
 }
