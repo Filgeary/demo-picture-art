@@ -11,16 +11,17 @@ const inputMask = (selector) => {
   }
 
   function createMask(evt) {
+    const currentTarget = evt.currentTarget;
     const matrix = '+7 (___) ___ __ __';
     let i = 0;
     let def = matrix.replace(/\D/g, '');
-    let val = this.value.replace(/\D/g, '');
+    let val = currentTarget.value.replace(/\D/g, '');
 
     if (def.length >= val.length) {
       val = def;
     }
 
-    this.value = matrix.replace(/./g, function (str) {
+    currentTarget.value = matrix.replace(/./g, function (str) {
       return /[_\d]/.test(str) && i < val.length
         ? val.charAt(i++)
         : i >= val.length
@@ -29,11 +30,11 @@ const inputMask = (selector) => {
     });
 
     if (evt.type === 'blur') {
-      if (this.value.length == 2) {
-        this.value = '';
+      if (currentTarget.value.length == 2) {
+        currentTarget.value = '';
       }
     } else {
-      setCursorPosition(this.value.length, this);
+      setCursorPosition(currentTarget.value.length, currentTarget);
     }
   }
   const inputElements = document.querySelectorAll(selector);
