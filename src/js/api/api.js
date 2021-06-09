@@ -24,21 +24,17 @@
  * @returns JSON response
  */
 const getDataJSON = async (url) => {
-  try {
-    const result = await fetch(url, {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+  const result = await fetch(url, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
 
-    if (!result.ok) {
-      throw new Error(`Failed to fetch ${url}, status: ${result.status}`);
-    }
-
-    return await result.json();
-  } catch (err) {
-    console.error(err);
+  if (!result.ok) {
+    throw new Error(`Failed to fetch ${url}, status: ${result.status}`);
   }
+
+  return await result.json();
 };
 
 /**
@@ -48,20 +44,12 @@ const getDataJSON = async (url) => {
  * @returns Text response
  */
 const postDataText = async (url, data) => {
-  try {
-    const result = await fetch(url, {
-      method: 'POST',
-      body: data,
-    });
+  const result = await fetch(url, {
+    method: 'POST',
+    body: data,
+  });
 
-    if (!result.ok) {
-      throw new Error(`Failed to fetch ${url}, status: ${result.status}`);
-    }
-
-    return await result.text();
-  } catch (err) {
-    console.error(err);
-  }
+  return await result.text();
 };
 
 export { getDataJSON, postDataText };
