@@ -397,6 +397,7 @@ h4 {
   right: 0;
 }
 .styles {
+  content-visibility: auto;
   position: relative;
 }
 .styles .p-heading {
@@ -444,6 +445,9 @@ h4 {
   bottom: -25rem;
   left: 0;
 }
+.card {
+  content-visibility: auto;
+}
 .card-block {
   background-color: #f7e7e6;
   padding-top: 5rem;
@@ -465,6 +469,7 @@ h4 {
   margin-left: -6rem;
 }
 .calc {
+  content-visibility: auto;
   padding: 8rem 0 4rem 0;
   /* Making it beautiful */
 }
@@ -583,6 +588,7 @@ h4 {
   background-size: 100%;
 }
 .portfolio {
+  content-visibility: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
@@ -633,6 +639,7 @@ h4 {
   margin: 15rem 0;
 }
 .gift {
+  content-visibility: auto;
   background: url('../img/gift-bg.jpg') no-repeat;
   background-size: cover;
   background-position-x: 60%;
@@ -665,6 +672,7 @@ h4 {
   left: -3rem;
 }
 .features {
+  content-visibility: auto;
   padding: 10rem 0;
 }
 .features h2,
@@ -694,6 +702,7 @@ h4 {
   left: -15rem;
 }
 .sizes {
+  content-visibility: auto;
   padding: 9rem 0 20rem 0;
   background: url('../img/sizes-bg.jpg') no-repeat center;
   background-size: cover;
@@ -758,6 +767,7 @@ h4 {
   font-weight: 700;
 }
 .scheme {
+  content-visibility: auto;
   padding-top: 9rem;
 }
 .scheme h2 {
@@ -815,6 +825,7 @@ h4 {
   right: -10rem;
 }
 .feedback {
+  content-visibility: auto;
   background-color: #f7e7e6;
   padding: 9rem 0;
   overflow: hidden;
@@ -864,6 +875,7 @@ h4 {
   left: 5rem;
 }
 .often-questions {
+  content-visibility: auto;
   position: relative;
   padding: 10rem 0 8rem 0;
 }
@@ -917,11 +929,15 @@ h4 {
   top: -25rem;
   left: 0;
 }
+.promo {
+  content-visibility: auto;
+}
 .promo-3 {
   background-color: #f7e7e6;
   padding: 8rem 0;
 }
 .consultation {
+  content-visibility: auto;
   background-color: #eed4d2;
   padding: 10rem 0;
 }
@@ -956,6 +972,7 @@ h4 {
   margin-top: 1rem;
 }
 .footer {
+  content-visibility: auto;
   padding: 4rem 0 3rem 0;
 }
 .footer th {
