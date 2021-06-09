@@ -24,15 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // call animation lib
   new WOW({ live: false }).init();
 
-  // call utils
-  const SCROLLBAR_WIDTH = calcScrollbarWidth();
-  inputMask('[name="phone"]');
-  showImgOnHover('.sizes-wrapper', '.sizes-block');
-  dropdownMenu('.burger', '.burger-menu');
-  scrollToTop('.button-scrollToTop');
-  dragDrop('[name="upload"]', '.file_upload', '.js-drag-drop-style');
-
-  // URLs postData
+  // URLs getData & postData
   const URL = {
     getJSON: 'assets/db.json',
     postJSON: 'https://jsonplaceholder.typicode.com/posts',
@@ -59,6 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
       isTriggerFixedPosition: true,
     },
   ];
+
+  // call utils
+  const SCROLLBAR_WIDTH = calcScrollbarWidth();
+  inputMask('[name="phone"]');
+  showImgOnHover('.sizes-wrapper', '.sizes-block');
+  dropdownMenu('.burger', '.burger-menu');
+  scrollToTop('.button-scrollToTop');
+  dragDrop('[name="upload"]', '.file_upload', '.js-drag-drop-style');
 
   // show modal by timer
   const modalTimerId = setTimeout(() => {
