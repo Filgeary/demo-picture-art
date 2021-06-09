@@ -34,7 +34,7 @@ h4 {
   font-weight: 700;
 }
 .p15 {
-  font-size: 1.5;
+  font-size: 1.5rem;
 }
 .p-heading {
   font-size: 2.2rem;
@@ -1551,7 +1551,6 @@ h4 {
     font-size: 1.5rem;
   }
   .main-features {
-    max-width: auto;
     margin-left: 20%;
   }
   .main-slider-btn {
@@ -1737,5 +1736,4 @@ h4 {
   display: block;
   border: 3px dashed #888;
   border-radius: 50px;
-  background-color: hsla(0, 0, 50, 0.1);
 }
