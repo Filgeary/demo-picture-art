@@ -1,8 +1,8 @@
 # demo-picture-art
 
-> JS training-project from Udemy course
-> 
-> legacy markup as is
+> JS training-project from [Udemy course](https://www.udemy.com/course/javascript_practice/)
+>
+> legacy markup as is (only desktop & tablet viewports)
 
 ## Features
 
@@ -16,11 +16,16 @@
 - Filter tabs
 - Accordion
 - Dropdown Menu
-- Smooth scrolling & Scroll to top
-- Drag&Drop for file upload
+- Smooth scrolling & Scroll to Top button
+- Drag & Drop to upload file
 
-## Performance
+## Performance tricks
 
-- `content-visibility: auto` in CSS for fast rendering
+- `content-visibility: auto` in CSS to defer rendering
 - native `lazy loading`
 - `webp` & `avif` images for first 2 screens
+
+## Support
+
+- Support modern browsers (Chrome is better)
+- Chrome Audit in Green zone (only desktop & tablet, 10 June 21)
