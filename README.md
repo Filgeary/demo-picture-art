@@ -22,8 +22,9 @@
 ## Performance tricks
 
 - `content-visibility: auto` in CSS to defer rendering
-- native `lazy loading`
+- Native `lazy loading`
 - `webp` & `avif` images for first 2 screens
+- Variable fonts
 
 ## Support
 
