@@ -824,7 +824,6 @@ h4 {
   right: -10rem;
 }
 .feedback {
-  content-visibility: auto;
   background-color: #f7e7e6;
   padding: 9rem 0;
   overflow: hidden;
