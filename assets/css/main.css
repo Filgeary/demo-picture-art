@@ -17,8 +17,8 @@ body {
 
 /* Works on Firefox */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: hsl(304, 77%, 65%) hsl(304, 77%, 65%);
+  scrollbar-width: auto;
+  scrollbar-color: hsl(304, 77%, 65%) hsl(195, 53%, 90%);
 }
 
 /* Works on Chrome, Edge, and Safari */
