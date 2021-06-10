@@ -33,7 +33,7 @@ gulp.task('build-js', () => {
 
 gulp.task('copy-assets', () => {
   return gulp
-    .src('./src/assets/**/*.*')
+    .src(['./src/assets/**/*.*', '!./src/assets/favicons/**/*.*'])
     .pipe(gulp.dest(PATH_PUBLIC + '/assets'))
     .on('end', browsersync.reload);
 });
