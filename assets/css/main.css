@@ -285,7 +285,8 @@ h4 {
 }
 .main .email {
   margin-top: 1.5rem;
-  text-align: center;
+  padding-right: 2rem;
+  text-align: right;
 }
 .main .email a {
   text-decoration: underline;
@@ -513,22 +514,20 @@ h4 {
 .calc select {
   opacity: 0.6;
   font-weight: 700;
-/*   margin-left: 4rem; */
   border: none;
   display: block;
-  width:100%;
+  width: 100%;
   font-size: 1.9rem;
   padding: 2rem 0;
 }
 .calc .promocode {
   opacity: 0.6;
   font-weight: 700;
-/*   margin-left: 4rem; */
   appearance: none;
   border: none;
   display: block;
-  width:100%;
-  text-align:center;
+  width: 100%;
+  text-align: center;
   font-size: 1.9rem;
   padding: 2rem 0;
 }
@@ -573,7 +572,7 @@ h4 {
 }
 .calc .file_upload > div {
   padding-left: 1em /* example */;
-  padding-top:1em;
+  padding-top: 1em;
   text-align: center;
 }
 .calc .file_upload input[type='file'] {
@@ -850,7 +849,7 @@ h4 {
 }
 .promo-2 img {
   max-width: 100%;
-  margin-top:8rem;
+  margin-top: 8rem;
   position: relative;
   right: -10rem;
 }
@@ -955,8 +954,7 @@ h4 {
 }
 .often-questions .spirt {
   position: absolute;
-/*   top: -25rem; */
-  bottom:0;
+  bottom: 0;
   left: 0;
 }
 .promo {
@@ -1305,7 +1303,7 @@ h4 {
     display: none;
   }
   .main .file_upload > button {
-    width: 100%;
+    width: 80%;
   }
 }
 @media (max-width: 1199px) {
@@ -1341,6 +1339,9 @@ h4 {
   }
   .main .button-order {
     margin-bottom: 3rem;
+  }
+  .main .file_upload > button {
+    width: 100%;
   }
   .promo-img {
     left: 0;
@@ -1489,14 +1490,14 @@ h4 {
     left: -10%;
   }
   .feedback {
-    padding-top:7rem;
-    padding-bottom:2rem;
+    padding-top: 7rem;
+    padding-bottom: 2rem;
   }
   .feedback-block img {
-    display:block;
-    width:100%;
-    height:auto;
-    object-fit:cover;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
   .feedback-heading {
     font-size: 2rem;
@@ -1515,8 +1516,7 @@ h4 {
   }
   .calc select {
     position: relative;
-    padding-left:2rem;
-/*     left: 30%; */
+    padding-left: 2rem;
   }
   .calc .button-transparent {
     margin: 4rem auto;
@@ -1524,6 +1524,9 @@ h4 {
   }
 }
 @media (max-width: 767px) {
+  .main-slider {
+    display: none;
+  }
   .main-features {
     max-width: 30rem;
     margin-left: auto;
@@ -1551,6 +1554,11 @@ h4 {
   .gift p {
     text-align: center;
   }
+  .gift-features {
+    display: grid;
+    gap: 3rem;
+    text-align: center;
+  }
   .sizes-wrapper {
     flex-wrap: wrap;
     justify-content: space-around;
@@ -1576,6 +1584,9 @@ h4 {
   }
   .card-3 img {
     float: right;
+  }
+  .feedback {
+    display: none;
   }
   .feedback-slider-item {
     padding-bottom: 0;
