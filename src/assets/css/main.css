@@ -513,19 +513,22 @@ h4 {
 .calc select {
   opacity: 0.6;
   font-weight: 700;
-  margin-left: 4rem;
+/*   margin-left: 4rem; */
   border: none;
   display: block;
+  width:100%;
   font-size: 1.9rem;
   padding: 2rem 0;
 }
 .calc .promocode {
   opacity: 0.6;
   font-weight: 700;
-  margin-left: 4rem;
+/*   margin-left: 4rem; */
   appearance: none;
   border: none;
   display: block;
+  width:100%;
+  text-align:center;
   font-size: 1.9rem;
   padding: 2rem 0;
 }
@@ -570,6 +573,7 @@ h4 {
 }
 .calc .file_upload > div {
   padding-left: 1em /* example */;
+  padding-top:1em;
   text-align: center;
 }
 .calc .file_upload input[type='file'] {
@@ -846,6 +850,7 @@ h4 {
 }
 .promo-2 img {
   max-width: 100%;
+  margin-top:8rem;
   position: relative;
   right: -10rem;
 }
@@ -878,11 +883,11 @@ h4 {
   top: 0.4rem;
 }
 .feedback-heading {
-  margin-top: 4rem;
-  font-size: 3rem;
+  margin-top: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
   text-align: center;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 .feedback-text {
   text-align: center;
@@ -950,7 +955,8 @@ h4 {
 }
 .often-questions .spirt {
   position: absolute;
-  top: -25rem;
+/*   top: -25rem; */
+  bottom:0;
   left: 0;
 }
 .promo {
@@ -1057,7 +1063,7 @@ h4 {
   border: none;
   border-radius: 50px;
   background-color: #ffffff;
-  padding: 1.5rem;
+  padding: 1.5rem 3rem;
   margin-bottom: 2.5rem;
   width: 100%;
   color: inherit;
@@ -1175,7 +1181,7 @@ h4 {
 }
 .popup-design .file_upload > button {
   float: right;
-  width: 8em;
+  width: 10em;
   /* example */
 
   height: 100%;
@@ -1233,7 +1239,7 @@ h4 {
   border: none;
   border-radius: 50px;
   background-color: #ffffff;
-  padding: 1.5rem;
+  padding: 1.5rem 3rem;
   margin-bottom: 1.5rem;
   width: 100%;
   color: inherit;
@@ -1268,7 +1274,7 @@ h4 {
 .popup-content {
   position: fixed;
   text-align: center;
-  max-width: 35rem;
+  max-width: 42rem;
   left: 50%;
   top: 10%;
   background-color: #ededed;
@@ -1482,6 +1488,16 @@ h4 {
   .promo-2 img {
     left: -10%;
   }
+  .feedback {
+    padding-top:7rem;
+    padding-bottom:2rem;
+  }
+  .feedback-block img {
+    display:block;
+    width:100%;
+    height:auto;
+    object-fit:cover;
+  }
   .feedback-heading {
     font-size: 2rem;
   }
@@ -1499,7 +1515,8 @@ h4 {
   }
   .calc select {
     position: relative;
-    left: 30%;
+    padding-left:2rem;
+/*     left: 30%; */
   }
   .calc .button-transparent {
     margin: 4rem auto;
