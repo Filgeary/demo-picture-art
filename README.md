@@ -2,7 +2,7 @@
 
 > JS training-project from [Udemy course](https://www.udemy.com/course/javascript_practice/)
 >
-> legacy markup as is (only desktop & tablet viewports)
+> legacy markup as is
 
 ## Features
 
@@ -18,6 +18,7 @@
 - Dropdown Menu
 - Smooth scrolling & Scroll to Top button
 - Drag & Drop to upload file
+- JSDoc comments (mainly params types)
 
 ## Performance tricks
 
